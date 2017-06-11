@@ -2,8 +2,8 @@ FROM resin/raspberry-pi-python:latest
 # Enable systemd
 ENV INITSYSTEM on
 # Your code goes here
-RUN apt-get update &&\
-    apt-get install -y fonts-liberation \
+RUN apt-get update && apt-get install -y \
+                       fonts-liberation \
                        libfuse-dev \
                        libfreetype6-dev \
                        liblcms2-dev \
@@ -15,9 +15,9 @@ RUN apt-get update &&\
                        tk8.6-dev \
                        tmux \
                        vim \
-                       zlib1g-dev &&\
-    apt-get clean &&\
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+                       zlib1g-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN pip install pillow
 
 WORKDIR /epaper
