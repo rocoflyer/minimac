@@ -1,4 +1,7 @@
-FROM resin/raspberry-pi-python:2.7
+FROM resin/raspberry-pi-python:latest
+# Enable systemd
+ENV INITSYSTEM on
+# Your code goes here
 RUN apt-get update &&\
     apt-get install -y fonts-liberation \
                        libfuse-dev \
