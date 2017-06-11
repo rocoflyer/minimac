@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
                        tmux \
                        vim \
                        zlib1g-dev \
-    && apt-get clean \
+#    && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN pip install pillow
 
