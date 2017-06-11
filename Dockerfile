@@ -2,7 +2,8 @@ FROM resin/raspberry-pi-python:latest
 # Enable systemd
 ENV INITSYSTEM on
 # Your code goes here
-RUN apt-get update && apt-get install -y
+RUN apt-get update && apt-get install -y \
+         libfuse-dev \
          python-imaging \
       && rm .rf /var/lib/apt/lists/*
       
