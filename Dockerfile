@@ -5,7 +5,7 @@ ENV INITSYSTEM on
 RUN apt-get update && apt-get install -y \
          libfuse-dev \
          python-imaging \
-      && rm .rf /var/lib/apt/lists/*
+      && rm -rf /var/lib/apt/lists/*
       
 WORKDIR /epaper
 RUN git clone --depth 1 https://github.com/embeddedartists/gratis && rm -rf epaper/.git
