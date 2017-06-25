@@ -4,8 +4,9 @@ ENV INITSYSTEM on
 # Your code goes here
 RUN apt-get update && apt-get install -y \
          libfuse-dev \
-         python-imaging \
-      && rm -rf /var/lib/apt/lists/*
+         python-imaging 
+         
+RUN rm -rf /var/lib/apt/lists/*
       
 WORKDIR /epaper
 RUN git clone --depth 1 https://github.com/embeddedartists/gratis && rm -rf epaper/.git
