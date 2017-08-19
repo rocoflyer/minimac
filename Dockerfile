@@ -1,1 +1,1 @@
-FROM jannis/epaper-docker
+FROM jayniz/embeddedartists-epaper-raspberry-docker
