@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian
+FROM resin/rpi-raspbian-python
 RUN apt-get update &&\
     apt-get install -y fonts-liberation \
                        libfuse-dev \
